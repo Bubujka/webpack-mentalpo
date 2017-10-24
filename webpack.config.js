@@ -5,5 +5,17 @@ module.exports  = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve('www')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.html/,
+        use: ['html-loader']
+      },
+    ]
   }
 };
