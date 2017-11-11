@@ -10,6 +10,10 @@ module.exports  = {
   module: {
     rules: [
       {
+        test: /\.yaml/,
+        use: ['json-loader', 'yaml-loader']
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
